@@ -29,6 +29,7 @@ namespace Web.Controllers
 
             List<SongViewModel> items = await _context.Songs.Skip((model.Pager.CurrentPage - 1) * PageSize).Take(PageSize).Select(s => new SongViewModel()
             {
+                Id = s.Id,
                 Title = s.Title,
                 Thumbnail = s.Thumbnail,
                 Rating = s.Rating,                
