@@ -13,18 +13,15 @@
     <thead>
         <tr>
             <th>
-                Author
-            </th>
-            <th>
                 Title
             </th>
             <th>
-                Price
-            <th>
-                ISBN
+                Rating
             </th>
             <th>
-                Page count
+                Url
+            <th>
+                Thumbnail
             </th>
             <th></th>
         </tr>
@@ -47,7 +44,7 @@
             </td>
 
             <td>
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Delete" asp-route-id="@item.Url">Delete</a>
             </td>
         </tr>
         }
