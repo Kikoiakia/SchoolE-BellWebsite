@@ -3,6 +3,7 @@
     public class SongViewModel
     {
      
+        public int Id { get; set; }
         public string Url { get; set; }
 
         public string Thumbnail { get; set; }

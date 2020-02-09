@@ -5,10 +5,12 @@ namespace Data
 {
     public class SongDb : DbContext
     {
-        public virtual DbSet<Song> Songs { get; set; }
+        public DbSet<Song> Songs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=KIRIL-LAPTOP\SQLEXPRESS;Initial Catalog=SongDb;TRUSTED_CONNECTION = TRUE");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-9F6IC4T\SQLEXPRESS;
+            Initial Catalog=SongDb;
+            TRUSTED_CONNECTION = TRUE");
             optionsBuilder.UseLazyLoadingProxies();
         }
     }
