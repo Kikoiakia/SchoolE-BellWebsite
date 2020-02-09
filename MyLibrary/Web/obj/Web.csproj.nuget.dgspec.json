@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Web\\Web.csproj": {}
+    "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\Data.csproj": {
+    "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\obj\\",
+        "projectPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Vladi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,20 +85,20 @@
         }
       }
     },
-    "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Web\\Web.csproj": {
+    "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Web\\Web.csproj",
-        "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Web\\obj\\",
+        "projectPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\Vladi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,8 +111,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\kiril\\Desktop\\Website\\MyLibrary\\Data\\Data.csproj"
+              "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj"
               }
             }
           }
@@ -151,12 +151,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.2, 3.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
