@@ -304,3 +304,5 @@ C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netco
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.0\Web.RazorTargetAssemblyInfo.cs
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.0\Web.Views.pdb
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.0\Web.csproj.CopyComplete
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.0\Razor\Views\Song\Create.cshtml.g.cs
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.0\Razor\Views\Song\Index.cshtml.g.cs

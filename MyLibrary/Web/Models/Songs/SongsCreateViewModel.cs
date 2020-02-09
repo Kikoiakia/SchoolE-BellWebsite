@@ -4,6 +4,7 @@ namespace Web.Models.Songs
 {
     public class SongsCreateViewModel
     {
+
         [Required]
         [MaxLength(80, ErrorMessage = "Author name cannot be longer than 80 characters")]
         public string Title { get; set; }
@@ -17,7 +18,6 @@ namespace Web.Models.Songs
         public int Rating { get; set; }
 
         [Required]
-        [RegularExpression(@"^\d{10}$|^\d{13}$", ErrorMessage = "ISBN should be either 10 or 13 characters long")]
         public string Url { get; set; }
 
     }
