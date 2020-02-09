@@ -4,57 +4,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Request a song</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Title
-            </th>
-            <th>
-                Rating
-            </th>
-            <th>
-                Url
-            <th>
-                Thumbnail
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+
+
+<table class="table" align="right">
+
+    <body>
         @foreach (var item in Model.Items)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Url)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Thumbnail)
-            </td>
+                <div class="Video" href="Style.css">
+                    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <iframe width="400" height="315"
+                            src="@Html.DisplayFor(modelItem => item.Url)">
+                    </iframe>
+                    <div class="Rating">
+                        <h5>
+                            <button type="button" class="btn btn-default" href=" ">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="false"></span>
+                            </button>
 
-            <td>
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+                            @Html.DisplayFor(modelItem => item.Rating)
+
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-up"></span>
+                            </button>
+
+                        </h5>
+                    </div>
+                </div>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
         }
-    </tbody>
+         </body>
+        
     <ul class="pagination">
         @for (var i = 1; i <= Model.Pager.PagesCount; i++)
         {
