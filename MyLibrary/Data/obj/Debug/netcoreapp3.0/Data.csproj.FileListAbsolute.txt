@@ -28,3 +28,13 @@ C:\Users\Vladi\Desktop\bancia proekt\SchoolE-BellWebsite\MyLibrary\Data\obj\Debu
 C:\Users\Vladi\Desktop\bancia proekt\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.AssemblyInfo.cs
 C:\Users\Vladi\Desktop\bancia proekt\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.dll
 C:\Users\Vladi\Desktop\bancia proekt\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.pdb
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\bin\Debug\netcoreapp3.0\Data.deps.json
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\bin\Debug\netcoreapp3.0\Data.runtimeconfig.json
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\bin\Debug\netcoreapp3.0\Data.runtimeconfig.dev.json
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\bin\Debug\netcoreapp3.0\Data.dll
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\bin\Debug\netcoreapp3.0\Data.pdb
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.csprojAssemblyReference.cache
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.AssemblyInfoInputs.cache
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.AssemblyInfo.cs
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.dll
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Data\obj\Debug\netcoreapp3.0\Data.pdb

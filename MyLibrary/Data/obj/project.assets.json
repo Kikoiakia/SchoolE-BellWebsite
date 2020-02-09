@@ -7011,23 +7011,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vladi\\.nuget\\packages\\": {},
+    "C:\\Users\\kiril\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\kiril\\Desktop\\Website\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\Vladi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vladi\\Desktop\\bancia proekt\\SchoolE-BellWebsite\\MyLibrary\\Data\\obj\\",
+      "projectPath": "C:\\Users\\kiril\\Desktop\\Website\\SchoolE-BellWebsite\\MyLibrary\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kiril\\Desktop\\Website\\SchoolE-BellWebsite\\MyLibrary\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
