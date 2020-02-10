@@ -48,7 +48,6 @@ C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netco
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.csprojAssemblyReference.cache
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\staticwebassets\Web.StaticWebAssets.Manifest.cache
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\staticwebassets\Web.StaticWebAssets.xml
-C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.RazorAssemblyInfo.cache
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.RazorAssemblyInfo.cs
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.AssemblyInfoInputs.cache
@@ -69,3 +68,6 @@ C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netco
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.csproj.CopyComplete
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.dll
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.pdb
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netcoreapp3.1\libvideo.dll
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.MvcApplicationPartsAssemblyInfo.cache

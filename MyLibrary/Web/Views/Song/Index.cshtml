@@ -4,11 +4,27 @@
     ViewData["Title"] = "Index";
 }
 
+
+
 <h1>Request a song</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<div class="col-md-4">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Url" class="control-label"></label>
+            <input asp-for="Url" class="form-control" />
+            <span asp-validation-for="Url" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
 
 
 <table class="table" align="right">
@@ -16,30 +32,30 @@
     <body>
         @foreach (var item in Model.Items)
         {
-                <div class="Video" href="Style.css">
-                    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
-                    <iframe width="400" height="315"
-                            src="@Html.DisplayFor(modelItem => item.Url)">
-                    </iframe>
-                    <div class="Rating">
-                        <h5>
-                            <button type="button" class="btn btn-default" href=" ">
-                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="false"></span>
-                            </button>
+            <div class="Video" href="Style.css">
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                <iframe width="400" height="315"
+                        src="@Html.DisplayFor(modelItem => item.Url)">
+                </iframe>
+                <div class="Rating">
+                    <h5>
+                        <button type="button" class="btn btn-default" href=" ">
+                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="false"></span>
+                        </button>
 
-                            @Html.DisplayFor(modelItem => item.Rating)
+                        @Html.DisplayFor(modelItem => item.Rating)
 
-                            <button type="button" class="btn btn-default">
-                                <span class="glyphicon glyphicon-arrow-up"></span>
-                            </button>
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-arrow-up"></span>
+                        </button>
 
-                        </h5>
-                    </div>
+                    </h5>
                 </div>
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
+            </div>
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
         }
-         </body>
-        
+    </body>
+
     <ul class="pagination">
         @for (var i = 1; i <= Model.Pager.PagesCount; i++)
         {

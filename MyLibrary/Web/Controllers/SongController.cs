@@ -8,6 +8,7 @@ using Data;
 using Data.Entity;
 using Web.Models.Songs;
 using Web.Models.Shared;
+using VideoLibrary;
 
 namespace Web.Controllers
 {
@@ -58,12 +59,17 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                var youtube = YouTube.Default;
+                var video = youtube.GetVideo(model.Url);
+                string videoId = getVideoId(model);
+                string thumbnail = "http://img.youtube.com/vi/" + videoId +"/0.jpg";
+                string videoLink = "https://www.youtube.com/embed/" + videoId;
                 Song song = new Song
                 {
-                    Title = model.Title,
-                    Thumbnail = model.Thumbnail,
-                    Rating = model.Rating,
-                    Url = model.Url,
+                    Title = video.Title,
+                    Thumbnail = thumbnail,
+                    Rating = 0,
+                    Url = videoLink,
                 };
 
                 _context.Add(song);
@@ -73,6 +79,20 @@ namespace Web.Controllers
             }
 
             return View(model);
+        }
+
+        private string getVideoId(SongsCreateViewModel model)
+        {
+            var linkArray = model.Url.ToCharArray();
+            Array.Reverse(linkArray);
+            var idArray = linkArray.Take(11).ToArray();
+            Array.Reverse(idArray);
+            var videoId = "";
+            foreach (var c in idArray)
+            {
+                videoId += c;
+            }
+            return videoId;
         }
 
         // GET: Songs/Delete/5

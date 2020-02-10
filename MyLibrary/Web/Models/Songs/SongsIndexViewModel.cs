@@ -8,5 +8,7 @@ namespace Web.Models.Songs
         public PagerViewModel Pager { get; set; }
 
         public ICollection<SongViewModel> Items { get; set; }
+
+        public string Url { get; set; }
     }
 }
