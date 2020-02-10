@@ -32,7 +32,6 @@ namespace Web.Controllers
             {
                 Id = s.Id,
                 Title = s.Title,
-                Thumbnail = s.Thumbnail,
                 Rating = s.Rating,                
                 Url = s.Url,                
 
@@ -67,7 +66,6 @@ namespace Web.Controllers
                 Song song = new Song
                 {
                     Title = video.Title,
-                    Thumbnail = thumbnail,
                     Rating = 0,
                     Url = videoLink,
                 };

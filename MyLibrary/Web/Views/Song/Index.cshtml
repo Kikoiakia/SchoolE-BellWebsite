@@ -4,27 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-
-
 <h1>Request a song</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add New</a>
 </p>
-
-<div class="col-md-4">
-    <form asp-action="Create">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Url" class="control-label"></label>
-            <input asp-for="Url" class="form-control" />
-            <span asp-validation-for="Url" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    </form>
-</div>
 
 
 <table class="table" align="right">
@@ -46,7 +30,7 @@
                         @Html.DisplayFor(modelItem => item.Rating)
 
                         <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-arrow-up"></span>
+                            <span class="glyphicon glyphicon-arrow-down"></span>
                         </button>
 
                     </h5>
@@ -56,12 +40,4 @@
         }
     </body>
 
-    <ul class="pagination">
-        @for (var i = 1; i <= Model.Pager.PagesCount; i++)
-        {
-            <li class="page-item @(i == Model.Pager.CurrentPage ? "active" : "")">
-                <a asp-route-Pager.CurrentPage="@i" class="page-link">@i</a>
-            </li>
-        }
-    </ul>
 </table>
