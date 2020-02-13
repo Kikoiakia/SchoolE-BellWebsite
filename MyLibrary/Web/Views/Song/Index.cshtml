@@ -10,6 +10,7 @@
     <a asp-action="Create">Add New</a>
 </p>
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <table class="table" align="right">
 
@@ -19,24 +20,26 @@
             <div class="Video" href="Style.css">
                 <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
                 <iframe width="400" height="315"
-                        src="@Html.DisplayFor(modelItem => item.Url)">
+                        src="@Html.DisplayFor(modelItem => item.Url)" class="wow fadeInUp">
                 </iframe>
                 <div class="Rating">
                     <h5>
-                        <button type="button" class="btn btn-default" href=" ">
-                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="false"></span>
+
+                        <button type="button" class="btn btn-default" href="Style.css">
+                            <span class="glyphicon glyphicon-arrow-up" onclick="upvote" aria-hidden="false"></span>
                         </button>
 
                         @Html.DisplayFor(modelItem => item.Rating)
 
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-arrow-down"></span>
+                        <button type="button" class="btn btn-default" href="Style.css">
+                            <span class="glyphicon glyphicon-arrow-down" onclick="downvote"></span>
                         </button>
 
                     </h5>
                 </div>
             </div>
             <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <a asp-action="Download" asp-route-id="@item.Id">Download</a>
         }
     </body>
 

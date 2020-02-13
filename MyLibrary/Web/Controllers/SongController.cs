@@ -43,6 +43,7 @@ namespace Web.Controllers
             return View(model);
         }
 
+
         // GET: Songs/Create
         public IActionResult Create()
         {
@@ -61,7 +62,6 @@ namespace Web.Controllers
                 var youtube = YouTube.Default;
                 var video = youtube.GetVideo(model.Url);
                 string videoId = getVideoId(model);
-                string thumbnail = "http://img.youtube.com/vi/" + videoId +"/0.jpg";
                 string videoLink = "https://www.youtube.com/embed/" + videoId;
                 Song song = new Song
                 {
@@ -70,8 +70,15 @@ namespace Web.Controllers
                     Url = videoLink,
                 };
 
-                _context.Add(song);
-                await _context.SaveChangesAsync();
+                if (!SongExists(song.Url))
+                {
+                    _context.Add(song);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    TempData["Fail"] = "Song already exist";
+                }
 
                 return RedirectToAction(nameof(Index));
             }
@@ -82,15 +89,19 @@ namespace Web.Controllers
         private string getVideoId(SongsCreateViewModel model)
         {
             var linkArray = model.Url.ToCharArray();
-            Array.Reverse(linkArray);
-            var idArray = linkArray.Take(11).ToArray();
-            Array.Reverse(idArray);
-            var videoId = "";
-            foreach (var c in idArray)
+            string videoId = "";
+            for (int i = linkArray.Length - 1; i >= linkArray.Length - 11; i--)
             {
-                videoId += c;
+                videoId += linkArray[i];
             }
-            return videoId;
+            string videoIdReversed = "";
+            for (int i = videoId.Length - 1; i >= 0; i--)
+            {
+                videoIdReversed += videoId[i];
+            }
+
+
+            return videoIdReversed;
         }
 
         // GET: Songs/Delete/5
