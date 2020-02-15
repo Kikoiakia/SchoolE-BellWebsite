@@ -8,10 +8,5 @@ namespace Web.Models.Songs
         public string Url { get; set; }
 
     }
-    /*
-     * Title = s.Title,
-                Thumbnail = s.Thumbnail,
-                Rating = s.Rating,                
-                Url = s.Url,  
-                */
+    
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ using Data.Entity;
 using Web.Models.Songs;
 using Web.Models.Shared;
 using VideoLibrary;
+using MediaToolkit;
+using MediaToolkit.Model;
 
 namespace Web.Controllers
 {
@@ -16,6 +19,7 @@ namespace Web.Controllers
     {
         private readonly SongDb _context;
         private const int PageSize = 10;
+
 
         public SongController()
         {
@@ -62,14 +66,17 @@ namespace Web.Controllers
                 var youtube = YouTube.Default;
                 var video = youtube.GetVideo(model.Url);
                 string videoId = getVideoId(model);
+                string videoName = video.Title.Substring(0, video.Title.Length - 10);
                 string videoLink = "https://www.youtube.com/embed/" + videoId;
                 Song song = new Song
                 {
-                    Title = video.Title,
+                    Title = videoName,
                     Rating = 0,
                     Url = videoLink,
                 };
 
+                
+                
                 if (!SongExists(song.Url))
                 {
                     _context.Add(song);
@@ -78,12 +85,49 @@ namespace Web.Controllers
                 else
                 {
                     TempData["Fail"] = "Song already exist";
+                    return RedirectToAction(nameof(Create));
                 }
 
                 return RedirectToAction(nameof(Index));
             }
 
             return View(model);
+        }
+        
+        public ActionResult DownloadVideo(int id)
+        {
+            string videoLink = "https://www.youtube.com/watch?v=" + getVideoId(id);
+            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Music");
+            string source = AppDomain.CurrentDomain.BaseDirectory + "Music\\";
+            var youtube = YouTube.Default;
+            var vid = youtube.GetVideo(videoLink);
+            string fileName = $"{source + vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3";
+           
+
+            var inputFile = new MediaFile { Filename = source + vid.FullName.Substring(0, vid.Title.Length - 10) };
+            var outputFile = new MediaFile { Filename = $"{source + vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3" };
+
+            using (var engine = new Engine())
+            {
+                engine.GetMetadata(inputFile);
+
+                engine.Convert(inputFile, outputFile);
+            }
+
+            byte[] fileBytes = System.IO.File.ReadAllBytes(fileName);
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, outputFile.Filename);
+
+            
+        }
+
+
+
+        private string getVideoId(int songId)
+        {
+            Song song = _context.Songs.Find(songId);
+            string id = song.Url.Remove(0, 30);
+            return id;
+
         }
 
         private string getVideoId(SongsCreateViewModel model)

@@ -71,3 +71,4 @@ C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netco
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netcoreapp3.1\libvideo.dll
 C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\obj\Debug\netcoreapp3.1\Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kiril\Desktop\Website\SchoolE-BellWebsite\MyLibrary\Web\bin\Debug\netcoreapp3.1\MediaToolkit.dll

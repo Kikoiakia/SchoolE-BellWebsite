@@ -39,7 +39,8 @@
                 </div>
             </div>
             <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            <a asp-action="Download" asp-route-id="@item.Id">Download</a>
+            @Html.ActionLink("Download", "DownloadVideo", new { id = item.Id})
+            
         }
     </body>
 

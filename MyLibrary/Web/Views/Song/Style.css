@@ -2,11 +2,10 @@
     background-color: lightblue;
 }
 
-#button{
+button{
 padding: 0;
 border: none;
-background: none;
-color: black;
+background-color: red;
 }
 
 .wow{
