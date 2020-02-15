@@ -96,28 +96,12 @@ namespace Web.Controllers
         
         public ActionResult DownloadVideo(int id)
         {
-            string videoLink = "https://www.youtube.com/watch?v=" + getVideoId(id);
-            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Music");
-            string source = AppDomain.CurrentDomain.BaseDirectory + "Music\\";
+            var videoLink = "https://www.youtube.com/watch?v=" + getVideoId(id);
             var youtube = YouTube.Default;
             var vid = youtube.GetVideo(videoLink);
-            string fileName = $"{source + vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3";
-           
-
-            var inputFile = new MediaFile { Filename = source + vid.FullName.Substring(0, vid.Title.Length - 10) };
-            var outputFile = new MediaFile { Filename = $"{source + vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3" };
-
-            using (var engine = new Engine())
-            {
-                engine.GetMetadata(inputFile);
-
-                engine.Convert(inputFile, outputFile);
-            }
-
-            byte[] fileBytes = System.IO.File.ReadAllBytes(fileName);
-            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, outputFile.Filename);
-
-            
+            string fileDownloadName = $"{vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3";
+            return base.File(vid.GetBytes(), System.Net.Mime.MediaTypeNames.Application.Octet, fileDownloadName);
+                        
         }
 
 
