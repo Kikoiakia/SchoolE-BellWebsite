@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+
+
 
 namespace Web
 {
@@ -24,6 +30,18 @@ namespace Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<SongDb>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<SongDb>();
+            services.AddRazorPages();
+
+            services.AddAuthentication().AddMicrosoftAccount(microsoftOptions =>
+            {
+                microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+                microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

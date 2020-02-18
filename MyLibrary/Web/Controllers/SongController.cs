@@ -98,9 +98,8 @@ namespace Web.Controllers
         {
             var videoLink = "https://www.youtube.com/watch?v=" + getVideoId(id);
             var youtube = YouTube.Default;
-            var vid = youtube.GetVideo(videoLink);
-            string fileDownloadName = $"{vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3";
-            return base.File(vid.GetBytes(), System.Net.Mime.MediaTypeNames.Application.Octet, fileDownloadName);
+            var vid = youtube.GetVideo(videoLink);       
+            return File(vid.GetBytes(), System.Net.Mime.MediaTypeNames.Application.Octet, $"{vid.FullName.Substring(0, vid.Title.Length - 10)}.mp3");
                         
         }
 
