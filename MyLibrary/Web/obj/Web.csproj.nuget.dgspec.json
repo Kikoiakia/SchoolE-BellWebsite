@@ -41,23 +41,27 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "VideoLibrary": {
               "target": "Package",
@@ -124,9 +128,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "MediaToolkit": {
+            "Microsoft.AspNet.Identity.Core": {
               "target": "Package",
-              "version": "[1.1.0.1, )"
+              "version": "[2.2.3, )"
             },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
@@ -136,15 +140,19 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
+            },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[5.8.0, )"
             },
             "VideoLibrary": {
               "target": "Package",

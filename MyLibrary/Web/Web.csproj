@@ -5,14 +5,15 @@
     <UserSecretsId>66893a11-0e34-46d4-9fc1-17604865ff24</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MediaToolkit" Version="1.1.0.1" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.2" />
+    <PackageReference Include="ServiceStack" Version="5.8.0" />
     <PackageReference Include="VideoLibrary" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>

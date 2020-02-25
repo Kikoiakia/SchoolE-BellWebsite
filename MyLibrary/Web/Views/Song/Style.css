@@ -2,12 +2,14 @@
     background-color: lightblue;
 }
 
-button{
-padding: 0;
-border: none;
-background-color: red;
+.glyphicon {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 
-.wow{
-    visibility:hidden;
+.glyphicon:hover {
+    opacity: 0.75;
+    cursor: pointer;
 }

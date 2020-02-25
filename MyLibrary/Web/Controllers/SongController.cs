@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,8 +9,8 @@ using Data.Entity;
 using Web.Models.Songs;
 using Web.Models.Shared;
 using VideoLibrary;
-using MediaToolkit;
-using MediaToolkit.Model;
+
+
 
 namespace Web.Controllers
 {
@@ -43,6 +42,7 @@ namespace Web.Controllers
 
             model.Items = items;
             model.Pager.PagesCount = (int)Math.Ceiling(await _context.Songs.CountAsync() / (double)PageSize);
+            model.User = 'test'; 
 
             return View(model);
         }
@@ -130,6 +130,7 @@ namespace Web.Controllers
 
             return videoIdReversed;
         }
+
 
         // GET: Songs/Delete/5
         public async Task<IActionResult> Delete(int id)

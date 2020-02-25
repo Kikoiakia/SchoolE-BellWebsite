@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Data.Entity;
+using System.Collections.Generic;
 using Web.Models.Shared;
 
 namespace Web.Models.Songs
@@ -9,6 +10,6 @@ namespace Web.Models.Songs
 
         public ICollection<SongViewModel> Items { get; set; }
 
-        public string Url { get; set; }
+        public SongUser User { get; set; }
     }
 }

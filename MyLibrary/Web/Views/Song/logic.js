@@ -1,5 +1,12 @@
-﻿$(index.cshtml).ready(function () {
-    new WOW().init();
-});
+﻿function upvote() {
+    this.item.Rating++;
+    $("Rating").val(this.item.Rating);
+    $("Rating").html(this.item.Rating);
+}
 
-$(".wow").addClass("fadeInUp");
+function downvote() {
+    this.item.Rating--;
+    $("Rating").val(this.item.Rating);
+    $("Rating").html(this.item.Rating);
+}
+
